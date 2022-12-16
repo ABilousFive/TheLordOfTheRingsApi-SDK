@@ -16,7 +16,9 @@ namespace ConsoleApp1
                 .Match("name", "The Fellowship Of The Ring")
                 .SetLimit(10);
 
-            var a = await bookService.GetBooksAsync(queryBuilder);
+            var response = await bookService.GetBooksAsync(queryBuilder);
+
+            Console.WriteLine(response);
             Console.ReadLine();
         }
     }

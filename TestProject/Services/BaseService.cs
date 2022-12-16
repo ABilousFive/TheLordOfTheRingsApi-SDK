@@ -16,7 +16,7 @@ namespace TestProject.Services
             _endpoint = endpoint;
 
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new("https://the-one-api.dev/v2/");
+            _httpClient.BaseAddress = new("https://the-one-api.dev/v2");
         }
 
         protected async Task<Response<T>?> GetResponseAsync<T>(string additionalEndpoint = "") where T : class

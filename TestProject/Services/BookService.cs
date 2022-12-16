@@ -8,21 +8,23 @@ namespace TestProject.Services
 
         public BookService(HttpClient client) : base(client, BookBaseEndpoint)
         { }
-        
+
         public async Task<Response<Book>> GetBooksAsync(QueryBuilder.QueryBuilder queryBuilder)
         {
             Query = queryBuilder.Build();
             return await GetResponseAsync<Book>();
         }
-        
-        public async Task<Response<Book>> GetBookByIdAsync(string id)
+
+        public async Task<Response<Book>> GetBookByIdAsync(string id, QueryBuilder.QueryBuilder queryBuilder)
         {
+            Query = queryBuilder.Build();
             return await GetResponseAsync<Book>($"/{id}");
         }
-        
-        public async Task<Response<Book>> GetChaptersByBookIdAsync(string id)
+
+        public async Task<Response<Chapter>> GetChaptersByBookIdAsync(string id, QueryBuilder.QueryBuilder queryBuilder)
         {
-            return await GetResponseAsync<Book>($"/{id}/chapter");
+            Query = queryBuilder.Build();
+            return await GetResponseAsync<Chapter>($"/{id}/chapter");
         }
     }
 }
