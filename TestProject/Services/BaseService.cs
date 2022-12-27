@@ -10,18 +10,19 @@ namespace TestProject.Services
         private HttpClient _httpClient;
         private readonly string? _endpoint;
         protected string? Query;
+        private const string ApiVersion = "/v2";
 
         protected BaseService(HttpClient httpClient, string endpoint)
         {
             _endpoint = endpoint;
 
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new("https://the-one-api.dev/v2");
+            _httpClient.BaseAddress = new("https://the-one-api.dev");
         }
 
         protected async Task<Response<T>?> GetResponseAsync<T>(string additionalEndpoint = "") where T : class
         {
-            var finalEndpoint = _endpoint + additionalEndpoint + Query;
+            var finalEndpoint = ApiVersion + _endpoint + additionalEndpoint + Query;
 
             using var response = await _httpClient.GetAsync(finalEndpoint);
             if (!response.IsSuccessStatusCode)
