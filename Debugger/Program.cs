@@ -1,7 +1,7 @@
 ﻿using TestProject.QueryBuilder;
 using TestProject.Services;
 
-namespace ConsoleApp1
+namespace Debugger
 {
     internal class Program
     {

@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TestProject\TestProject.csproj" />
+    <ProjectReference Include="..\TestProject\TheLordOfTHeRingsSDK.csproj" />
+    <ProjectReference Include="..\TheLordOfTHeRingsSDK\TheLordOfTHeRingsSDK.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,8 @@
-﻿using TestProject.Models;
+﻿using TestPTheLordOfTHeRingsSDKroject.Services;
+using TestTheLordOfTHeRingsSDKProject.Models;
+using TheLordOfTHeRingsSDK.Models;
 
-namespace TestProject.Services
+namespace TheLordOfTHeRingsSDK.Services
 {
     public class MovieService : BaseService
     {

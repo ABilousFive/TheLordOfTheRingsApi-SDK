@@ -1,6 +1,7 @@
-﻿using TestProject.QueryBuilder.Models;
+﻿
+using TheLordOfTHeRingsSDK.QueryBuilder.Models;
 
-namespace TestProject.QueryBuilder
+namespace TheLordOfTHeRingsSDK.QueryBuilder
 {
     public partial class QueryBuilder
     {
@@ -56,7 +57,7 @@ namespace TestProject.QueryBuilder
         {
             _existFilter.Add(propertyName, false);
             AddDictionaryString(nameof(_existFilter), _existFilter);
-            
+
             return this;
         }
 

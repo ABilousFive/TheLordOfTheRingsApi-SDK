@@ -1,6 +1,7 @@
-﻿using TestProject.Models;
+﻿using TestPTheLordOfTHeRingsSDKroject.Services;
+using TheLordOfTHeRingsSDK.Models;
 
-namespace TestProject.Services
+namespace TheLordOfTHeRingsSDK.Services
 {
     public class ChapterService : BaseService
     {

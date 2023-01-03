@@ -1,7 +1,5 @@
 ﻿using System.Net;
 using System.Net.Http.Json;
-using TestProject.CustomExceptions;
-using TestProject.Models;
 
 namespace TestProject.Services
 {

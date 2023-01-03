@@ -1,4 +1,6 @@
-﻿using TestProject.Models;
+﻿using TestPTheLordOfTHeRingsSDKroject.Services;
+using TheLordOfTHeRingsSDK.Models;
+using TheLordOfTHeRingsSDK.QueryBuilder;
 
 namespace TestProject.Services
 {
